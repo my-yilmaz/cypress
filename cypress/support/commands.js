@@ -25,3 +25,31 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require('cypress-iframe');
 require('@4tw/cypress-drag-drop')
+//=========================================================
+// Cypress.Commands.add -> komut ekle, tanımla
+// automationpractice.com -> login icin tanımlandı
+Cypress.Commands.add('loginAP',(email,password)=>{
+    cy.visit('http://automationpractice.com/index.php')
+    cy.get('.login').click();
+    cy.get('#email').click().type(email);
+    cy.get('#passwd').click().type(password);
+    cy.get('#SubmitLogin > span').click();
+})
+//=========================================================
+
+
+// Amazon arama
+Cypress.Commands.add('amozanSearch',(urun)=>{
+    cy.visit('https://www.amazon.com/')
+    cy.wait(2000)
+        cy.get('#twotabsearchtextbox').type(urun)
+        cy.get('#nav-search-submit-button').click()
+})
+
+
+//=========================================================
+// dosya yuklemek icin
+// https://www.npmjs.com/package/cypress-file-upload
+//npm install --save-dev cypress-file-upload
+// cypress-file-upload
+import 'cypress-file-upload';

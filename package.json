@@ -13,6 +13,7 @@
     "@4tw/cypress-drag-drop": "^2.2.1",
     "@faker-js/faker": "^7.6.0",
     "cypress": "^10.10.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1"
   }
 }
