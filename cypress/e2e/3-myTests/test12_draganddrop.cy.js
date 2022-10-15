@@ -20,6 +20,6 @@ describe('Drag and Drop',()=>{
     it('drag and drop',()=>{
         cy.visit('https://www.testandquiz.com/selenium/testing.html')
         cy.get('#sourceImage').drag('#targetDiv')
-        //ilki suruklenecek element, drag icerisindeki ise suruklenecegi yer
+        //ilki suruklenecek element.. drag icerisindeki ise suruklenecegi yer
     })
 })
