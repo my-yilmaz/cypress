@@ -53,3 +53,12 @@ Cypress.Commands.add('amozanSearch',(urun)=>{
 //npm install --save-dev cypress-file-upload
 // cypress-file-upload
 import 'cypress-file-upload';
+
+// automationexercise anasayfası
+Cypress.Commands.add('anasayfa',()=>{
+    cy.visit('https://www.automationexercise.com/')
+})
+// automationexercise anasayfasını dogrulama
+Cypress.Commands.add('homePageİsVisible',()=>{
+    cy.get('.active > :nth-child(1) > h1').should('have.text','AutomationExercise')
+})
