@@ -5,7 +5,7 @@ describe('Verify Test Cases Page',()=>{
         cy.anasayfa()
         cy.homePageİsVisible()
         cy.contains('Test Cases').click()
-        cy.get('b').should('be.visible','TEST CASES')
+        cy.get('b').should('be.visible')
     })
 })
 

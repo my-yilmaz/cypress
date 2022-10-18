@@ -3,7 +3,7 @@ describe('Verify All Products',()=>{
         cy.anasayfa()
         cy.homePageİsVisible()
         cy.contains('Products').click()
-        cy.get('.title').should('be.visible','ALL PRODUCTS')
+        cy.get('.title').should('be.visible')
         cy.get(':nth-child(3) > .product-image-wrapper > .single-products > .productinfo').trigger('mouseover')
         cy.contains('View Product').click()
         cy.get('.product-information > h2').should('be.visible')

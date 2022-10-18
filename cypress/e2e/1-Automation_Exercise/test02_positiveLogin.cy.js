@@ -5,11 +5,11 @@ describe('Positive Login',()=>{
         cy.anasayfa()
         cy.homePageİsVisible()
         cy.get('.shop-menu > .nav > :nth-child(4) > a').click()
-        cy.get('.login-form > h2').should('be.visible','Login to your account')
+        cy.get('.login-form > h2').should('have.text','Login to your account')
         cy.get('.login-form > form > [type="email"]').type(validEmail)
         cy.get('[type="password"]').type(validPassword)
         cy.get('.login-form > form > .btn').click()
-        cy.get(':nth-child(10) > a').should('be.visible','Logged in as Zetta')
+        cy.get(':nth-child(10) > a').should('have.text',' Logged in as Zetta')
 
     })
 })

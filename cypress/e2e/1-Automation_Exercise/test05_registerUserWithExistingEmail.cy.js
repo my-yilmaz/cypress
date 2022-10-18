@@ -9,7 +9,7 @@ describe('Register User with existing email',()=>{
         cy.get('[type="text"]').type('firstname')
         cy.get('.signup-form > form > [type="email"]').type(validEmail)
         cy.get('.signup-form > form > .btn').click()
-        cy.get('.signup-form > form > p').should('be.visible','Email Address already exist!')
+        cy.get('.signup-form > form > p').should('have.text','Email Address already exist!')
     })
 })
 
