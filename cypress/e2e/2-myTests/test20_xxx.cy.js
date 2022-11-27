@@ -17,6 +17,9 @@ it('paylinn login test',function(){
     .and('contain.text','React')
     .and('contain.text','Logout')
     .and('contain.text',this.data.username)
+    cy.get('.MuiButtonBase-root').click()
+    cy.get('.header__nav > :nth-child(1) > .header__lineOne').should('contain.text','Welcome')
+    cy.get('.header__nav').should('contain.text','Welcome')
 
     
 })
