@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-28T16:02:15.744Z",
+    "end": "2022-11-28T16:02:31.498Z",
+    "duration": 15754,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "50bfc0c9-e219-41be-8fd2-e08dac91ee56",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-Automation_Exercise\\test17_removeProductsFromCart.cy.js",
+      "file": "cypress\\e2e\\1-Automation_Exercise\\test17_removeProductsFromCart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "674a1a9f-1680-4181-b0b3-ff33adae167d",
+          "title": "Remove Products From Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "remove products from cart",
+              "fullTitle": "Remove Products From Cart remove products from cart",
+              "timedOut": null,
+              "duration": 10469,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.anasayfa();\ncy.homePageİsVisible();\ncy.get('.features_items > :nth-child(3) > .product-image-wrapper > .single-products > .productinfo > .btn').click();\ncy.get('u').click();\ncy.get('.active').should('have.text', 'Shopping Cart');\ncy.get('.cart_quantity_delete > .fa').click();\ncy.get('#empty_cart > .text-center').should('have.text', 'Cart is empty! Click here to buy products.');",
+              "err": {},
+              "uuid": "21713c06-38e7-4951-94e9-c0b3fa31f4d2",
+              "parentUUID": "674a1a9f-1680-4181-b0b3-ff33adae167d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "21713c06-38e7-4951-94e9-c0b3fa31f4d2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10469,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
