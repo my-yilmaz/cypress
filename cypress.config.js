@@ -4,6 +4,7 @@ module.exports = defineConfig({
   projectId: "pw2quz",
   
   e2e: {
+    experimentalRunAllSpecs:true,
     setupNodeEvents(on, config) {
       // implement node event listeners here  
     },
