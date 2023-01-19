@@ -2,13 +2,13 @@ describe("My first Test", () => {
     //describe('fonksiyon ismi', 'test icin olusturulacak fnksiyonlar')
     it("URL Testi", () => {
       //test'i tanimliyoruz. @Test gibi.
-      //it('Testin ismi','olusturulacak onksiyonlar')
+      //it('Testin ismi','olusturulacak Fonksiyonlar')
   
       //URL adresinde google var mi?
       cy.visit("https://www.google.com/");
       cy.url().should('include','www.google.com')
       //url() url testi icin kullanilir
-      //should('icwriyor mu','mesela www.google.com')
+      //should('iceriyor mu','mesela www.google.com')
     });
   
     //2. test

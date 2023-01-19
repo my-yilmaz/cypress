@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-28T16:03:30.121Z",
+    "end": "2022-11-28T16:04:13.734Z",
+    "duration": 43613,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bb033b38-82d7-4e80-909a-af9e5e9b9bd3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-Automation_Exercise\\test20_searchProductsandVerifyCartAfterLogin.cy.js",
+      "file": "cypress\\e2e\\1-Automation_Exercise\\test20_searchProductsandVerifyCartAfterLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "09126539-6cdc-4397-aa89-c973af37d15b",
+          "title": "Search Products and Verify Cart After Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "search products and verify cart after login",
+              "fullTitle": "Search Products and Verify Cart After Login search products and verify cart after login",
+              "timedOut": null,
+              "duration": 37342,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.anasayfa();\ncy.get('.shop-menu > .nav > :nth-child(2) > a').click();\ncy.url().should('include', 'products');\ncy.get('#search_product').type('Blue Top');\ncy.get('#submit_search').click();\ncy.get('.title').should('be.visible', 'SEARCHED PRODUCTS');\ncy.get('.features_items').should('include.text', 'Blue Top');\ncy.get('.productinfo > .btn').click();\ncy.get('u').click();\ncy.get('#cart_items > :nth-child(1)').should('include.text', 'Blue Top');\ncy.get('.nav > :nth-child(4)').click();\ncy.get('.login-form > form > [type=\"email\"]').type(validEmail);\ncy.get('[type=\"password\"]').type(validPassword);\ncy.get('.login-form > form > .btn').click();\ncy.contains('Cart').click();\ncy.get('#cart_items > :nth-child(1)').should('include.text', 'Blue Top');",
+              "err": {},
+              "uuid": "b9a3a08b-c40a-4f55-9596-a5aee37e5ea5",
+              "parentUUID": "09126539-6cdc-4397-aa89-c973af37d15b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b9a3a08b-c40a-4f55-9596-a5aee37e5ea5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37342,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-28T16:01:31.719Z",
+    "end": "2022-11-28T16:02:11.702Z",
+    "duration": 39983,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9581452-3f76-4837-b5cd-fd6f58dc23f8",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-Automation_Exercise\\test16_loginBeforeCheckout.cy.js",
+      "file": "cypress\\e2e\\1-Automation_Exercise\\test16_loginBeforeCheckout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5c5f1458-324e-4487-90e5-862499304a58",
+          "title": "Place Order: Login before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login before checkout",
+              "fullTitle": "Place Order: Login before Checkout login before checkout",
+              "timedOut": null,
+              "duration": 34516,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.anasayfa();\ncy.homePageİsVisible();\ncy.get('.shop-menu > .nav > :nth-child(4) > a').click();\ncy.get('.login-form > h2').should('have.text', 'Login to your account');\ncy.get('.login-form > form > [type=\"email\"]').type(validEmail);\ncy.get('[type=\"password\"]').type(validPassword);\ncy.get('.login-form > form > .btn').click();\ncy.get(':nth-child(10) > a').should('have.text', ' Logged in as Zetta');\ncy.get('.features_items > :nth-child(3) > .product-image-wrapper > .single-products > .productinfo > .btn').click();\ncy.get('.shop-menu > .nav > :nth-child(3) > a').click();\ncy.get('.col-sm-6 > .btn').click();\ncy.get('#address_delivery').should('include.text', 'yilmaz');\ncy.get('.form-control').type('Hello World');\ncy.get(':nth-child(7) > .btn').click();\ncy.get(':nth-child(2) > .col-sm-12 > .form-control').type('yilmaz');\ncy.get(':nth-child(3) > .col-sm-12 > .form-control').type('1111-2222-3333-4444');\ncy.get('.cvc > .form-control').clear().type('444');\ncy.get(':nth-child(2) > .form-control').type('12');\ncy.get(':nth-child(3) > .form-control').type('2026');\ncy.get('#submit').click(); // cy.get('#success_message > .alert-success').should('be.visible','Your order has been placed successfully!')",
+              "err": {},
+              "uuid": "d0f31c4f-3917-410e-9cba-2f5cf8525650",
+              "parentUUID": "5c5f1458-324e-4487-90e5-862499304a58",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d0f31c4f-3917-410e-9cba-2f5cf8525650"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 34516,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

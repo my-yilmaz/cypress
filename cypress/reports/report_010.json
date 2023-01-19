@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-28T15:58:11.699Z",
+    "end": "2022-11-28T15:58:30.394Z",
+    "duration": 18695,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e62bf9cd-4d38-45ee-952f-c54a5a99af02",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-Automation_Exercise\\test11_verifySubscriptionCartPage.cy.js",
+      "file": "cypress\\e2e\\1-Automation_Exercise\\test11_verifySubscriptionCartPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35029e49-0ba8-4b0b-971a-d6a37ff25881",
+          "title": "Place Order: Register before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Place Order: Register before Checkout",
+              "fullTitle": "Place Order: Register before Checkout Place Order: Register before Checkout",
+              "timedOut": null,
+              "duration": 12517,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.anasayfa();\ncy.homePageİsVisible();\ncy.contains('Cart').click();\ncy.get('.single-widget > h2').scrollIntoView();\ncy.get('.single-widget > h2').should('be.visible', 'SUBSCRIPTION');\ncy.get('#susbscribe_email').type(validEmail);\ncy.get('#subscribe').click();\ncy.get('.alert-success').should('have.text', 'You have been successfully subscribed!');",
+              "err": {},
+              "uuid": "c2c8a94c-d185-46f4-83bd-67b94e63329f",
+              "parentUUID": "35029e49-0ba8-4b0b-971a-d6a37ff25881",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c2c8a94c-d185-46f4-83bd-67b94e63329f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12517,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
